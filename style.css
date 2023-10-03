@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Roboto:wght@100;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    min-width: 300px;
+    margin: 0; padding: 0;
+}
+
+body {    
+    font-family: 'Roboto', 'Arial';
+    font-size: 0.8em;
+}
+
+nav a {
+    color: white;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+nav a:hover {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+#bienvenue {
+    background: black;
+    color: white;
+}
+
+#flex-header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+#flex-presentation {
+    display: flex;
+}
+
+.gauche-presentation {
+    width: 50%;
+    padding: 10px;
+}
+
+.droite-presentation {
+    width: 46%;
+}
+
+.droite-presentation img {
+    width: 60%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
