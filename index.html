@@ -11,18 +11,13 @@
     <section id="bienvenue">
       <header>
         <div id="flex-header" class="container">
-          <!-- ON UTILISE FLEXBOX POUR ALIGNER -->
           <div class="logo">Frédéric Hot</div>
-          <!-- ICI MON PRENOM ET MON NOM -->
           <nav>
             <a href="index.html">Accueil</a>
-            <a href="mailto:hot.frederic@orange.fr">Contactez-moi</a
-            ><!-- ICI MON MENU -->
+            <a href="mailto:hot.frederic@orange.fr">Contactez-moi</a>
           </nav>
         </div>
       </header>
-
-      <!-- ON UTILISE ENCORE FLEXBOX POUR ALIGNER -->
       <div id="flex-presentation" class="container">
         <div class="gauche-presentation">
           <h1>Portfolio</h1>
@@ -33,22 +28,46 @@
           >
         </div>
         <div class="droite-presentation">
-          <img src="images/illustration.png" alt="Illustration" /><!-- IMAGE -->
+          <img src="images/illustration.png" alt="Illustration" />
         </div>
       </div>
     </section>
 
-    <section>
-      <!-- LA PARTIE "CREATIONS" -->
-
-      <!-- ON UTILISE UNE GRILLE POUR LES PROJETS -->
-      <div id="projet-grille">... ... ...</div>
+    <section id="projets" class="container">
+      <div>
+        <h2>Créations</h2>
+        <p>Voici toutes mes créations.</p>
+      </div>
+      <div id="projet-grille">
+        <a href="#"
+          ><img src="images/jump-start.png" alt="jump-start" />
+          <h3>Jump Start</h3></a
+        >
+        <a href="#"
+          ><img src="images/mega-pop.jpg" alt="mega-pop" />
+          <h3>Rodeo Pump</h3></a
+        >
+        <a href="#"
+          ><img src="images/pac-man.jpg" alt="pac-man" />
+          <h3>Pac Man</h3></a
+        >
+        <a href="#"
+          ><img src="images/rodeo-pump.jpg" alt="rodeo-pump" />
+          <h3>Mega Pop</h3></a
+        >
+      </div>
     </section>
 
-    <section>
-      <!-- LA PARTIE "CONTACT" -->
+    <section id="contact" class="container">
+      <h2>Contact</h2>
+      <p>Alors, on travail ensemble ?</p>
+      <a href="mailto:hot.frederic@orange.fr"
+        ><button>Envoyer un email</button></a
+      >
     </section>
 
-    <footer>© Frédéric Hot</footer>
+    <footer>
+      <div class="container">© Frédéric Hot</div>
+    </footer>
   </body>
 </html>

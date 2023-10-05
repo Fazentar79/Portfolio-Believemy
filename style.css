@@ -11,13 +11,14 @@ html, body {
 
 body {    
     font-family: 'Roboto', 'Arial';
-    font-size: 0.8em;
+    font-size: 1em;
+    font-weight: 400;
 }
 
 nav a {
     color: white;
     font-weight: 100;
-    margin-left: 10px;
+    padding-left: 10px;
 }
 
 nav a:hover {
@@ -26,6 +27,21 @@ nav a:hover {
 
 a {
     text-decoration: none;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 700;
+}
+
+footer {
+    border-top: 2px solid black;
+    padding: 25px 0;
 }
 
 #bienvenue {
@@ -41,20 +57,70 @@ a {
 
 #flex-presentation {
     display: flex;
-    margin-top: 50px;
+    padding: 50px 0;
+}
+
+#projets {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#projet-grille {    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    position: relative;   
+}
+
+#projet-grille img {
+    max-width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+
+#projet-grille img:hover {
+    opacity: .7;
+}
+
+#projet-grille H3 {
+    color: white;
+    font-size: 2em;
+    position: absolute;
+    z-index: 1;
+    transform: translate(40px, -200px);
+    text-shadow: 0 0 30px black;    
+}
+
+#contact {
+    text-align: center;
+    padding: 50px 0;    
+}
+
+#contact button {
+    padding: 20px;
+    background: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#contact button:hover {
+    opacity: .8;
 }
 
 .gauche-presentation {
-    width: 50%;    
+    max-width: 100%;    
 }
 
 .droite-presentation {
     width: 50%;
-    margin-left: 10%;
+    padding-left: 50px;
 }
 
 .droite-presentation img {
     max-width: 100%;
+    width: 75%;
     height: auto;
 }
 
