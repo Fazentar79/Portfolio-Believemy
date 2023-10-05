@@ -49,6 +49,17 @@ footer {
     color: white;
 }
 
+#jump-start {
+    color: white;
+    background: no-repeat url('images/points.png'), url('images/jump-start.png');
+    background-size: cover;
+    padding-bottom: 500px;
+}
+
+#presentation {
+    text-align: center;
+}
+
 #flex-header {
     display: flex;
     justify-content: space-between;
@@ -127,4 +138,43 @@ footer {
 .container {
     margin: 0 auto;
     width: 1200px;
+}
+
+@media all and (max-width: 1130px) {
+    .container {
+        width: 800px;
+    }
+    #projet-grille h3 {
+        transform: translate(40px,-150px);
+    }
+}
+
+@media all and (max-width: 730px) {
+    .container {
+        width: 600px;
+    }
+    .droite-presentation {
+        display: none;
+    }
+    .gauche-presentation h1{
+        text-align: center;
+    }
+    #projet-grille {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+    #projet-grille h3 {
+        transform: translate(40px, -250px);
+        font-size: 2.5em;
+    }
+}
+
+@media all and (max-width: 530px) {
+    .container {
+        width: 400px;
+    }
+    #projet-grille h3 {
+        transform: translate(100px, -250px);
+        text-shadow: 0 0 10px black;
+    }
 }
