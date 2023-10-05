@@ -21,7 +21,7 @@ nav a {
 }
 
 nav a:hover {
-    font-weight: 400;
+    font-weight: bold;
 }
 
 a {
@@ -36,24 +36,26 @@ a {
 #flex-header {
     display: flex;
     justify-content: space-between;
-    padding-top: 15px;
+    padding: 15px 0;
 }
 
 #flex-presentation {
     display: flex;
+    margin-top: 50px;
 }
 
 .gauche-presentation {
-    width: 50%;
-    padding: 10px;
+    width: 50%;    
 }
 
 .droite-presentation {
-    width: 46%;
+    width: 50%;
+    margin-left: 10%;
 }
 
 .droite-presentation img {
-    width: 60%;
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
