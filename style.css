@@ -22,7 +22,7 @@ nav a {
 }
 
 nav a:hover {
-    font-weight: bold;
+    font-weight: 700;
 }
 
 a {
@@ -31,12 +31,18 @@ a {
 
 h1 {
     font-size: 3em;
-    font-weight: 700;
+    margin: 0;
 }
 
 h2 {
     font-size: 2em;
-    font-weight: 700;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+h3 {
+    font-size: 1.5em;
 }
 
 footer {
@@ -47,13 +53,14 @@ footer {
 #bienvenue {
     background: black;
     color: white;
+    height: 100vh;
+    overflow: hidden;
 }
 
 #jump-start {
     color: white;
-    background: no-repeat url('images/points.png'), url('images/jump-start.png');
+    background: url('images/points.png'),center url('images/jump-start.png');
     background-size: cover;
-    padding-bottom: 500px;
 }
 
 #presentation {
@@ -68,40 +75,23 @@ footer {
 
 #flex-presentation {
     display: flex;
-    padding: 50px 0;
+    align-items: center;
+    height: calc(100vh - 50px);
 }
 
-#projets {
+#projets p {
     text-align: center;
-    padding-bottom: 50px;
 }
 
 #projet-grille {    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 30px;
-    position: relative;   
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 15px; 
 }
 
-#projet-grille img {
-    max-width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    position: relative;
-}
-
-#projet-grille img:hover {
+#projet-grille a:hover {
     opacity: .7;
-}
-
-#projet-grille H3 {
-    color: white;
-    font-size: 2em;
-    position: absolute;
-    z-index: 1;
-    transform: translate(40px, -200px);
-    text-shadow: 0 0 30px black;    
 }
 
 #contact {
@@ -121,18 +111,44 @@ footer {
 }
 
 .gauche-presentation {
-    max-width: 100%;    
+    width: 50%;    
 }
 
 .droite-presentation {
     width: 50%;
-    padding-left: 50px;
+    text-align: center;
 }
 
 .droite-presentation img {
-    max-width: 100%;
     width: 75%;
-    height: auto;
+}
+
+.projet {
+    border-radius: 5px;
+    color: white;
+    padding: 30px 25px;
+    transition: all .3s;
+    text-shadow: 0 0 15px black;
+}
+
+#projet-grille a:nth-of-type(1) {
+    background: url(images/jump-start.png);
+    background-size: cover;
+}
+
+#projet-grille a:nth-of-type(2) {
+    background: url(images/rodeo-pump.jpg);
+    background-size: cover;
+}
+
+#projet-grille a:nth-of-type(3) {
+    background: url(images/pac-man.jpg);
+    background-size: cover;
+}
+
+#projet-grille a:nth-of-type(4) {
+    background: url(images/mega-pop.jpg);
+    background-size: cover;
 }
 
 .container {
@@ -142,39 +158,57 @@ footer {
 
 @media all and (max-width: 1130px) {
     .container {
-        width: 800px;
+        width: 700px;
     }
-    #projet-grille h3 {
-        transform: translate(40px,-150px);
+    #projet-grille {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 }
 
 @media all and (max-width: 730px) {
-    .container {
-        width: 600px;
+    footer {
+        text-align: center;
     }
-    .droite-presentation {
-        display: none;
+    .container {
+        width: 100%;
+    }
+    .gauche-presentation, .droite-presentation {
+        width: 100%;
+    }
+    .gauche-presentation {
+        margin-top: 150px;
     }
     .gauche-presentation h1{
         text-align: center;
+        margin-bottom: 50px;
     }
+    #flex-presentation {
+        flex-direction: column-reverse;
+        justify-content: center;
+    }    
     #projet-grille {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(4, 1fr);
+        padding: 30px;
     }
     #projet-grille h3 {
-        transform: translate(40px, -250px);
         font-size: 2.5em;
+        text-align: center;
     }
 }
 
 @media all and (max-width: 530px) {
     .container {
-        width: 400px;
+        width: 300px;
     }
-    #projet-grille h3 {
-        transform: translate(100px, -250px);
-        text-shadow: 0 0 10px black;
+    .gauche-presentation {
+        margin-top: 50px;
     }
+    .gauche-presentation, .droite-presentation {
+        width: 100%;
+    }
+    #projet-grille {
+        padding: 0;
+    }   
 }
